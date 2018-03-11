@@ -1,0 +1,267 @@
+/* -------------------------------------------- */
+/* general */
+/* -------------------------------------------- */
+
+:root {
+  --color: #e3cb33;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Play', sans-serif;
+  background: rgba(211,211,211, 0.75);
+}
+
+
+.container {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  background-color: rgba(211,211,211, 0.75);
+}
+
+.row {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 300px;
+  background: black;
+  border-radius: 1px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+.col {
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  text-align: center;
+  color: white;
+  /* padding: 5% auto; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  padding: 5px;
+  border: none;
+  outline: none;
+  font-family: 'Play', sans-serif;
+}
+
+/* -------------------------------------------- */
+/* score section */
+/* -------------------------------------------- */
+
+#score {
+  width: 100%;
+  position: relative;
+  margin: 1rem 0;
+}
+
+.score-info {
+  width: 10rem;
+  height: 150%;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  background-color: black;
+  color: white;
+  border-radius: 1px;
+  box-shadow: 1px 1px 5px 1px gray;
+  margin: 0 auto;
+  padding: 0.3rem 0;
+}
+
+.score-info .score-txt,
+.score-info .score-number {
+  display: block;
+}
+
+.btn-instruction {
+  position: absolute;
+  top: 0;
+  left: 15px;
+  background: black;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  transition: .1s ease-in-out;
+}
+
+.btn-instruction:hover {
+  font-size: 3rem;
+}
+
+.btn-play {
+  position: absolute;
+  top: 85px;
+  left: 15px;
+  background: var(--color);
+  color: black;
+  font-size: 2.3rem;
+  padding-right: 0;
+  transition: .1s ease-in-out;
+}
+
+.btn-play:hover {
+  font-size: 2.7rem;
+}
+
+.play {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: play .2s 1 ease both;
+}
+
+.play span {
+  transform: translate(-2px,-4px);
+}
+
+@keyframes play {
+  0% { font-size: 3.5rem; opacity: 0}
+  50% { font-size: 3.5rem; opacity: 0; font-weight: 700; transform: rotateZ(90deg)}
+  100% {font-size: 3.5rem; opacity: 1; font-weight: 700; transform: rotateZ(90deg)}
+}
+
+/* -------------------------------------------- */
+/* board section */
+/* -------------------------------------------- */
+
+#board {
+  width: 640px;
+  height: 640px;
+  margin: 1rem auto;
+  box-shadow: 1px 1px 5px 1px gray;
+}
+
+#board  > div {    
+  border: 1px solid black;
+  float: left;
+  width: 64px;
+  height: 64px;
+}
+
+/* -------------------------------------------- */
+/* moving elements */
+/* -------------------------------------------- */
+
+.furry {
+  background-image: url('../images/furry.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.coin {
+  background-image: url('../images/coin.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* -------------------------------------------- */
+/* over section */
+/* -------------------------------------------- */
+
+.col-over span {
+  display: block;
+  line-height: 1.5;
+  letter-spacing: 2px;
+}
+
+.col-over span:first-of-type {
+  font-size: 2rem;
+}
+
+.col-over span:last-of-type {
+  font-size: 1.5rem;
+}
+
+.col-over span:last-of-type .score-over {
+  color: var(--color);
+}
+
+.btn-over {
+  margin-top: 10px;
+  background-color: white;
+  font-size: .6rem;
+  font-weight: 700;
+  display: block;
+}
+
+.btn-over:hover {
+  background:var(--color);
+}
+
+.invisible {
+  display: none;
+}
+
+.btn-animate {
+  animation: rotate .5s 1 ease alternate;
+}
+
+@keyframes rotate {
+  100% { transform: rotate(360deg)}
+}
+
+/* -------------------------------------------- */
+/* instruction section */
+/* -------------------------------------------- */
+
+.row-instruction {
+  position: relative;
+}
+
+.col-instruction {
+  padding: 20px;
+}
+
+.col-instruction h1 {
+  margin: 20px 0;
+  padding: 5px 15px;
+  border-bottom: 1px solid white;
+  font-size: 2rem;
+}
+
+.col-instruction p {
+  padding: 5px 0;
+  font-weight: 400;
+  text-align: justify;
+  align-self: flex-start;
+}
+
+.btn-close {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  padding-top: 0px;
+  font-size: 1rem;
+  font-weight: 700;
+  background: white;
+  transform: scale(1);
+  transition: .2s ease-in-out;
+}
+
+.btn-close:hover {
+  background: var(--color);
+  transform: rotate(90deg);
+}
