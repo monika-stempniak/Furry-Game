@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //variables
   var btnPlay = document.querySelector('.btn-play');
-  var instruction = document.getElementById('instruction');
+  var instruction = document.querySelector('#instruction');
   var btnInstruction = document.querySelector('.btn-instruction');
   var btnClose = instruction.querySelector('.btn-close');
   var btnOver = document.querySelector('.btn-over');
