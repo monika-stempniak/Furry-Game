@@ -86,7 +86,7 @@ var Game = function() {
     if (this.furry.x < 0 || this.furry.x > 9 || this.furry.y < 0 || this.furry.y > 9) {
       clearInterval(this.idSetInterval);
       this.hideVisibleFurry();
-      var over = document.getElementById('over');
+      var over = document.querySelector('#over');
       over.classList.remove('invisible');
       var overScore = over.querySelector('.score-over');
       overScore.innerText = this.score;
