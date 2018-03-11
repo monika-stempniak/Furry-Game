@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   //variables
   var btnPlay = document.querySelector('.btn-play');
-  var instruction = document.getElementById('instruction');
+  var instruction = document.querySelector('#instruction');
   var btnInstruction = document.querySelector('.btn-instruction');
   var btnClose = instruction.querySelector('.btn-close');
   var btnOver = document.querySelector('.btn-over');
@@ -211,7 +211,7 @@ var Game = function() {
     if (this.furry.x < 0 || this.furry.x > 9 || this.furry.y < 0 || this.furry.y > 9) {
       clearInterval(this.idSetInterval);
       this.hideVisibleFurry();
-      var over = document.getElementById('over');
+      var over = document.querySelector('#over');
       over.classList.remove('invisible');
       var overScore = over.querySelector('.score-over');
       overScore.innerText = this.score;
