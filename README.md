@@ -3,6 +3,9 @@ Simple board game
 
 In project I use Object Oriented Javascript to create HTML Game. I add webpack to bundle JS Modules, use CSS and JS Animations to create nice UX.
 
+See the project here:
+https://monika-stempniak.github.io/FurryGame/
+
 ### Instruction
 
 Bohaterem gry jest **Furry**, który porusza się po planszy o rozmiarach 10x10 pól.
